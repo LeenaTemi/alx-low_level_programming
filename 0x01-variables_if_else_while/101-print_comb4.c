@@ -8,6 +8,7 @@ int main(void)
 	int ones = '0';
 	int tens = '0';
 	int hundreds = '0';
+	/*declaration*/
 	for (hundreds = '0'; hundreds <= '9'; hundreds++)/*for hundreds*/
 	{
 		for (tens = '0'; tens <= '9'; tens++)
