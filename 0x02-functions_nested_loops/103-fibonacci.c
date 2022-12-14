@@ -8,10 +8,11 @@
  */
 
 int main(void)
+
 {
 	int a = 0, b = 1, next = 0;
 	int sum = 0;
-	/** variables*/
+	/** blank line */
 	while (next < 4000000)
 	{
 		next = a + b;
@@ -19,7 +20,7 @@ int main(void)
 		b = next;
 		if (next % 2 == 0)
 			sum += next;
-		printf("%i\n", sum);
-		return (0);
 	}
+	printf("%i\n", sum);
+	return (0);
 }
