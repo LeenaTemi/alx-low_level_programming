@@ -5,8 +5,10 @@
  * Return: Value of the last digits.
  */
 int print_last_digit(int n)
+
 {
 	int last_digit = n % 10;
+
 	if (last_digit < 0)
 		/** blank line */
 		last_digit *= -1;
