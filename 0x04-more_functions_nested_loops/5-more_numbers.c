@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <stdio.h>
 /**
  * more_numbers - prints more numbers
  * Return: 0 if successful
@@ -19,7 +19,7 @@ void more_numbers(void)
 			}
 			_putchar((j % 10) + 48);
 		}
-		_putchar('\n')
+		_putchar('\n');
 			i++;
 	}
 }
