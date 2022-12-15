@@ -2,50 +2,42 @@
 #include <stdio.h>
 
 /**
- *  print_times_tables - prints time table with provided number
- *  @n: the provide value by the user
+ *  print_times_tables - Prints the times table of the input, starting with 0.
+ *  @n: The value of the times table to be printed.
  *  Return: Always 0 (success)
  */
 void print_times_table(int n)
 {
-	int row;
-	int column;
-	int product;
+	int num, mult, prod;
 
-	if (n < 0 || n >= 15)
-		return;
-	for (row = 0; row <= n; row++)
+	if (n >= 0 && n <= 15)
 	{
-		for (row = 0; row <= n; column++)
+		for (num = 0; num <= n; num++)
 		{
-			product = (row * column);
-			if (column == 0)
-				_putchar('0' + product);
-			else
+			_putchar('0');
+			for (mult = 1; mult <= n; mult++)
 			{
 				_putchar(',');
 				_putchar(' ');
-				if (product <= 9)
-				{
+				prod = num * mult;
+				if (prod <= 99)
 					_putchar(' ');
-					_putchar(' ');
-					_putchar('0' + product);
-				}
-				else if (product > 9 && product < 100)
-				{
-					_putchar(' ');
-					_putchar('0' + (product / 10));
-					_putchar('0' + (product % 10));
-				}
-				else if (product >= 100)
-				{
-					_putchar('0' + (product / 100));
-					_putchar('0' + ((product / 10) % 10));
-					_putchar('0' + (product % 10));
-				}
+				if (prod <= 9)
+					if (prod >= 100)
+					{
+						_putchar((prod / 100) + '0');
+						_putchar(((prod / 10)) % 10 + '0');
+					}
+					else if (prod <= 99 && prod >= 10)
+					{
+						_putchar((prod / 10) + '0');
+					}
+				_putchar((prod % 10) + '0');
 			}
+			_putchar('\n');
 		}
-		_putchar('\n');
 	}
 }
+
+
 
